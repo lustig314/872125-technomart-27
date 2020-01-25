@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8" />
-    <title>HTML Academy: Техномарт</title>
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>HTML Academy: Каталог - Техномарт</title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/style-catalog.css" />
     <link rel="stylesheet" href="css/normalize.css" />
   </head>
@@ -74,7 +75,12 @@
         <div class="container">
           <h2>Фильтр товаров</h2>
           <div class="filter__price">
-            <!--Пока не нужно по дз-->
+            <span>Фильтр:</span>
+            <form action="#" method="POST" oninput="priceoutput.value=price.value">
+              <label for="price">Цена:</label> 
+              <input type="range" id="price" min="0" max="40000" step="1000">
+              <output name="priceoutput">30000</output>
+            </form>
           </div>
           <div class="filter__brands">
             <ul class="filter__brands-list">
@@ -100,7 +106,12 @@
       <section class="products">
         <div class="container">
           <div class="products__sorting">
-            <!--Пока не нужно по дз-->
+            <ul class="products__sorting-list">
+              <li>Сортировка:</li>
+              <li><button>По цене</button></li>
+              <li><button>По типу</button></li>
+              <li><button>По функционалу</button></li>
+            </ul>
           </div>
           <h2>Список продуктов</h2>
           <ul class="products__list">
