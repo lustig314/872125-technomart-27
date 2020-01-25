@@ -1,0 +1,21 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+	font-weight: 400;
+	font-family: 'PT Sans', sans-serif;
+	line-height: 24px;
+	color: #000000;
+	font-size: 13px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.header {
+  background-color: #f3f7f8;
+}
