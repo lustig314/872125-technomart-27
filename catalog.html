@@ -83,7 +83,7 @@
 
       <section class="filter">
         <div class="container">
-          <h2>Фильтр товаров</h2>
+          <h2 class="visually-hidden">Фильтр товаров</h2>
           <div class="filter__price">
             <span>Фильтр:</span>
             <form action="#" method="POST" oninput="priceoutput.value=price.value">
@@ -92,29 +92,55 @@
               <output name="priceoutput">30000</output>
             </form>
           </div>
-          <div class="filter__brands">
+          <form class="filter__brands" action="#" method="POST">
+            <h3>Производители:</h3>
             <ul class="filter__brands-list">
-              <li>Производители:</li>
-              <li>BOSCH</li>
-              <li>ИНТЕРСКОЛ</li>
-              <li>MAKITA</li>
-              <li>DEWALT</li>
-              <li>HITACHI</li>
+              <li>
+                <input type="checkbox" name="bosch" id="brand-1" checked>
+                <label for="brand-1">BOSCH</label>
+              </li>
+              <li>
+                <input type="checkbox" name="inter" id="brand-2">
+                <label for="brand-2">ИНТЕРСКОЛ</label>
+              </li>
+              <li>
+                <input type="checkbox" name="makita" id="brand-3" checked>
+                <label for="brand-3">MAKITA</label>
+              </li>
+              <li>
+                <input type="checkbox" name="dewalt" id="brand-4">
+                <label for="brand-4">DEWALT</label>
+              </li>
+              <li>
+                <input type="checkbox" name="hitachi" id="brand-5">
+                <label for="brand-5">HITACHI</label>
+              </li>
             </ul>
-          </div>
-          <div class="filter__power">
-            <span>Питание:</span>
-            <ul class="filter__power-list"> 
-              <li>АККУМУЛЯТОРНЫЕ</li>
-              <li>СЕТЕВЫЕ</li>
+            <h3>Питание:</h3>
+            <ul class="filter-power"> 
+              <li>
+                <input type="radio" name="power-radio" id="battery" checked>
+                <label for="battery">АККУМУЛЯТОРНЫЕ</label>
+              </li>
+              <li>
+                <input type="radio" name="power-radio" id="web">
+                <label for="web">СЕТЕВЫЕ</label>
+              </li>
             </ul>
-          </div>
-          <a class="filter__btn" href="#">Показать</a>
+            <a class="filter__btn" href="#">Показать</a>
+          </form>
         </div>
       </section>
 
       <section class="products">
         <div class="container">
+          <div class="products__popup">
+            <button type="button" class="products-close">
+              <img src="img/icon-close.svg" alt="Закрыть всплывающее окно">
+            </button>
+            <a href="#" class="products__popup btn-issue">Оформить заказ</a>
+            <button type="button" class="products__popup btn-cont">Продолжить покупки</button>
+          </div>
           <div class="products__sorting">
             <span>Сортировка:</span> 
             <ul class="products__sorting-list"> 
@@ -123,7 +149,7 @@
               <li><button>По функционалу</button></li>
             </ul>
           </div>
-          <h2>Список продуктов</h2>
+          <h2 class="visually-hidden">Список продуктов</h2>
           <ul class="products__list">
             <li class="product__list-item">
               <img src="img/perforator-1.jpg" alt="Перфоратор BOSCH BFG 3000">
