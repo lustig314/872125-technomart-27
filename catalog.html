@@ -134,19 +134,12 @@
 
       <section class="products">
         <div class="container">
-          <div class="products__popup">
-            <button type="button" class="products-close">
-              <img src="img/icon-close.svg" alt="Закрыть всплывающее окно">
-            </button>
-            <a href="#" class="products__popup btn-issue">Оформить заказ</a>
-            <button type="button" class="products__popup btn-cont">Продолжить покупки</button>
-          </div>
           <div class="products__sorting">
             <span>Сортировка:</span> 
             <ul class="products__sorting-list"> 
-              <li><button>По цене</button></li>
-              <li><button>По типу</button></li>
-              <li><button>По функционалу</button></li>
+              <li><button type="button">По цене</button></li>
+              <li><button type="button">По типу</button></li>
+              <li><button type="button">По функционалу</button></li>
             </ul>
           </div>
           <h2 class="visually-hidden">Список продуктов</h2>
@@ -176,7 +169,7 @@
             <li class="product__list-item">
               <img src="img/cart-icon.png" alt="Иконка корзины">
               <a class="product__list-item btn-buy" href="#">Купить</a>
-              <a class="product__list-item btn-bkmarks" href="#">В Закладки</a>
+              <button type="button">В Закладки</button>
               <h3>
                 <a href="#">
                   <span>Перфоратор BOSCH</span>
@@ -309,6 +302,16 @@
         </div>
       </div>
     </footer>
+    
+    <section class="products__popup">
+      <div class="container">
+        <button type="button" class="products-close">
+          <img src="img/icon-close.svg" alt="Закрыть всплывающее окно">
+        </button>
+        <a href="#" class="products__popup btn-issue">Оформить заказ</a>
+        <button type="button" class="products__popup btn-cont">Продолжить покупки</button>
+      </div>
+    </section>
     
     <script src="js/main.js"></script>
   </body>
