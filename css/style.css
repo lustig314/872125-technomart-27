@@ -38,6 +38,7 @@ a {
 .header {
   background-color: #f3f7f8;
   min-height: 320px;
+  margin-bottom: 60px;
 }
 
 .header__top {
@@ -334,7 +335,6 @@ a {
 .menu {
   background-color: #32425c;
   box-shadow: inset 0px -5px 0 0 #293449;
-  
 }
 
 .menu-list {
@@ -369,33 +369,77 @@ a {
   background-color: #1d2739;
 }
 
-.top__list {
+.top__lists {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.top__list-left {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 620px;
+  min-height: 410px;
+  margin-right: 20px;
+}
+
+.top__list-right {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  min-height: 410px;
 }
 
 .top-item {
   width: 300px;
-  height: 123px; 
+  height: 123px;
+  padding-top: 25px;
+  padding-bottom: 30px;
+  padding-left: 20px; 
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
-.top-item:first-child {
+.top__list-left .top-item:first-child {
   background-color: #ffbf47;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
-.top-item:nth-child(2) {
+.top__list-left .top-item:nth-child(2) {
   background-color: #3bbce3;
 }
 
-.top-item:nth-child(3) {
-  background-color: #dc91d8;
+.top-slider {
+  background-color: #000000;
+  background-image: url("../img/top-image.jpg");
+  background-repeat: no-repeat;
+  width: 620px;
+  min-height: 266px;
+  margin-right: 20px;
 }
 
-.top-item:nth-child(4) {
+.top__list-right .top-item:first-child {
+  background-color: #dc91d8;
+  margin-right: 0;
+}
+
+.top-item:nth-child(2) {
   background-color: #8ed78f;
+  margin-right: 0;
 }
 
 .top-item:last-child {
   background-color: #ffc047;
+  margin-right: 0;
 }
 
 .top__subtitle {
@@ -404,6 +448,8 @@ a {
   line-height: 30px;
   font-weight: 700;
   color: #ffffff;
+  margin: 0;
+  padding: 0;
 }
 
 .top-item__link {
@@ -414,8 +460,12 @@ a {
   color: #ffffff;
   text-transform: uppercase;
   background-color: rgba(0, 0, 0, 0.1);
-  padding: 10px;
   border-radius: 2px;
+  display: inline-block;
+  width: 135px;
+  height: 38px;
+  text-align: center;
+  padding-top: 11px;
 }
 
 .top-item__link:hover,
@@ -427,14 +477,6 @@ a {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.top-slider {
-  background-color: #000000;
-  background-image: url("../img/top-image.jpg");
-  background-repeat: no-repeat;
-  width: 728px;
-  height: 266px;
-}
-
 .top__title {
   font-family: 'Cuprum', Arial, sans-serif;
   font-size: 36px;
@@ -442,6 +484,8 @@ a {
   font-weight: 700;
   color: #ffffff;
   text-transform: uppercase;
+  padding: 0;
+  margin: 0;
 }
 
 .top-slider__descr {
@@ -450,6 +494,12 @@ a {
   line-height: 24px;
   font-weight: 400;
   color: #ffffff;
+  margin-bottom: 113px;
+}
+
+.top__slider-btn {
+  width: 195px;
+  height: 38px;
 }
 
 .title-section {
@@ -463,16 +513,38 @@ a {
   font-weight: 400;
   color: #32425c;
   text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.title-section {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  min-height: 89px;
+  padding-left: 30px;
+  padding-top: 27px;
+  padding-right: 24px;
+  margin-bottom: 20px;
 }
 
 .popular-goods__list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 .good {
   border: 1px solid #e4e4e4;
-  display: block;
-  
+  width: 220px;
+  min-height: 320px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 20px;
 }
 
 .good:hover {
@@ -508,12 +580,26 @@ a {
 
 .popular-brands__list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 85px;
 }
 
 .popular-brands__item {
   border: 1px solid #e7e7e7;
-  padding: 20px;
+  width: 220px;
+  height: 145px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.popular-brands__item:nth-child(4n) {
+  margin-right: 0;
 }
 
 .popular-brands__item:hover,
@@ -580,7 +666,6 @@ a {
   
 }
 
-
 .services__inner-descr {
   width: 280px;
 }
@@ -641,9 +726,11 @@ a {
   color: #ffffff;
   background-color: #ee3643;
   text-transform: uppercase;
-  padding: 14px 10px;
+  padding: 10px 10px;
   border-radius: 2px;
-  
+  display: inline-block;
+  text-align: center;
+  height: 38px;
 }
 
 .btn:hover,
