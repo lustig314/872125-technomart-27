@@ -463,7 +463,31 @@ input[type="radio"].visually-hidden {
   background-repeat: no-repeat;
   width: 620px;
   min-height: 266px;
+  position: relative;
 }
+
+.top-slider::before {
+  content: "";
+  background-image: url("../img/icon-left.svg");
+  position: absolute;
+  width: 22px;
+  height: 40px;
+  top: 112px;
+  left: 24px;
+}
+
+.top-slider::after {
+  content: "";
+  background-image: url("../img/icon-right.svg");
+  position: absolute;
+  width: 22px;
+  height: 40px;
+  top: 112px;
+  right: 20px;
+}
+
+
+
 
 .top__list-right .top-item:first-child {
   background-color: #dc91d8;
