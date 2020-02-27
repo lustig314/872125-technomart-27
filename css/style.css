@@ -1188,6 +1188,38 @@ input[type="radio"].visually-hidden {
   color: #ee3643;
 }
 
+@keyframes rollIn {
+  0% {
+      opacity: 0;
+      transform: translate3d(-100%, 0px, 0px) rotate3d(0, 0, 1, -120deg);
+  }
+  100% {
+      opacity: 1;
+      transform: none;
+  }
+}
+  
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
 
 .write-popup {
   position: fixed;
@@ -1204,10 +1236,31 @@ input[type="radio"].visually-hidden {
   display: none;
 }
 
+.write-popup::after {
+  content: "";
+  position: absolute;
+  background-color: #f4f4f4;
+  height: 112px;
+  width: 620px;
+  bottom: 0px;
+  z-index: -1;
+}
+
+
+.popup-show {
+  display: block;
+  animation: rollIn 0.55s;
+  animation-fill-mode: both;
+}
+
+.popup-error {
+  animation: shake 0.6s;
+}
+
 .popup-close {
   position: absolute;
-  top: 0;
-  right: 34px;
+  top: 6px;
+  right: 9px;
   width: 22px;
   height: 22px;
   border: 0;
@@ -1222,8 +1275,8 @@ input[type="radio"].visually-hidden {
   width: 27px;
   height: 5px;
   background-color: #ff3342;
-  top: 17px;
-  left: 22px;
+  top: 10px;
+  left: -1px;
 }
 
 .popup-close::before {
@@ -1266,10 +1319,20 @@ input[type="radio"].visually-hidden {
 	font-family: 'PT Sans', Arial, sans-serif;
   line-height: 18px;
   padding-left: 15px;
+  outline: none;
+  border-radius: 2px;
 }
 
 .popup-input::-webkit-input-placeholder { 
   color: #a9a9a9;
+}
+
+.popup-input:hover {
+  border-color: #b5b5b5;
+}
+
+.popup-input:focus {
+  border-color: #ee3643;
 }
 
 .popup-name_type_text {
@@ -1297,16 +1360,21 @@ input[type="radio"].visually-hidden {
   margin-bottom: 31px;
 }
 
-
-.write-popup__bottom {
-  background-color: #f4f4f4;
-  min-height: 112px;
-}
-
 .write-btn {
   border: none;
   padding: 10px 200px;
   cursor: pointer;
-  margin-left: 80px;
   margin-top: 37px;
+}
+
+.map-popup {
+  width: 100%;
+  min-height: 446px;
+  position: fixed;
+  box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
+  background-color: #fff;
+  max-width: 940px;
+  bottom: 200px;
+  margin: 0 auto;
+  display: none;
 }
