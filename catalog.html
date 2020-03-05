@@ -5,8 +5,8 @@
     <title>HTML Academy: Каталог - Техномарт</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style-catalog.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style-catalog.min.css">
   </head>
 
   <body>
@@ -148,7 +148,7 @@
           <div class="products__sorting">
             <span class="products__sorting-name">Сортировка:</span> 
             <ul class="sorting-list"> 
-              <li class="sorting-list__item"><button class="sorting-list__btn sorting-list__btn_current" type="button" class="sorting-list_current">По цене</button></li>
+              <li class="sorting-list__item"><button class="sorting-list__btn sorting-list__btn_current" type="button">По цене</button></li>
               <li class="sorting-list__item"><button class="sorting-list__btn" type="button">По типу</button></li>
               <li class="sorting-list__item"><button class="sorting-list__btn" type="button">По функционалу</button></li>
               <li class="sorting-list__item">
@@ -366,7 +366,7 @@
     </footer>
     
     <section class="products-popup">
-        <button type="button" class="popup-close">
+        <button type="button" class="products-close">
           <span class="visually-hidden">Закрыть</span>
         </button>
         <h3 class="products-popup__title">Товар добавлен в корзину!</h3>
@@ -375,7 +375,7 @@
           <button type="button" class="products__popup btn-cont">Продолжить покупки</button>
         </div>
     </section>
-    
-    <script src="js/main.js"></script>
+
+    <script src="js/catalog.min.js"></script>
   </body>
 </html>

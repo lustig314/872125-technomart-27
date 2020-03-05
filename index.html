@@ -5,7 +5,8 @@
     <title>HTML Academy: Техномарт</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/slick.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>      
   <body>
@@ -75,9 +76,23 @@
                 <a class="top-item__link" href="#">На все случаи</a> 
               </li>
               <li class="top-item top-slider">
-                <h2 class="top__title">Дрели</h2>
-                <span class="top-slider__descr">Соседям на радость!</span>
-                <a class="top__slider-btn btn" href="catalog.html">Открыть каталог</a>
+                <div class="top-slider__item">
+                  <h2 class="top__title">Дрели</h2>
+                  <span class="top-slider__descr">Соседям на радость!</span>
+                  <div class="slick__image">
+                    <img src="img/slide-image-1.jpg" alt="">
+                  </div> 
+                  <a class="top__slider-btn btn" href="catalog.html">Открыть каталог</a>
+                  
+                </div>
+                <div class="top-slider__item">
+                    <h2 class="top__title">Перфораторы</h2>
+                    <span class="top-slider__descr">Настоящие мужские игрушки</span>
+                    <div class="slick__image">
+                      <img src="img/slide-image-2.jpg" alt="">
+                    </div>
+                    <a class="top__slider-btn btn" href="catalog.html">Открыть каталог</a>
+                </div>
               </li>
             </ul>
             <ul class="top__list-right">
@@ -193,16 +208,29 @@
           </div>  
             <div class="services__inner">
               <ul class="services__inner-list">
-                <li class="inner-list__item_current"><button type="button" class="services__inner-btn">Доставка</button></li>
+                <li class="inner-list__item"><button type="button" class="services__inner-btn">Доставка</button></li>
                 <li class="inner-list__item"><button type="button" class="services__inner-btn">Гарантия</button></li>
                 <li class="inner-list__item"><button type="button" class="services__inner-btn">Кредит</button></li>
               </ul>
             <div class="services__inner-descr">
               <h3 class="services__title">Доставка</h3>
-              <p class="services__inner-text">Мы с удовольствием доставим ваш товар прямо 
-                к вашему подъезду совершенно бесплатно!<br>
+              <p class="services__inner-text">
+                Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!<br>
                 Ведь мы неплохо заработаем,<br>
                 поднимая его на ваш этаж!</p>
+            </div>
+            <div class="services__inner-descr ">
+              <h3 class="services__title">Гарантия</h3>
+              <p class="services__inner-text">
+              Если купленный у нас товар поломается или заискрит,<br>
+              а также в случае пожара, спровоцированного его возгоранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.<br> 
+              Дом уж восстановите как-нибудь сами.</p>
+            </div>
+            <div class="services__inner-descr">
+              <h3 class="services__title">Кредит</h3>
+              <p class="services__inner-text">Залезть в долговую яму стало проще! 
+              Кредитные консультанты придут вам на помощь.</p>
+              <a class="inner-descr__btn btn" href="catalog.html">Открыть каталог</a>
             </div>
           </div>
         </div>
@@ -226,8 +254,8 @@
             <h2 class="contacts__subtitle subtitle">Контакты</h2>
             <p class="contacts__info">Вы можете забрать товар сами,<br> 
             заехав в наш офис:</p>
-            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003165!2d30.320858716173472!3d59.938719169054075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1579894871171!5m2!1sru!2sru" width="300" height="158" style="border:0;" allowfullscreen=""></iframe>
-            <button type="button" class="contacts-btn btn" href="#">Заблудились? Напишите нам!</button>
+            <a href="#" class="map-link"><img class="map" src="img/map.jpg" width="300" height="158" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></a>
+            <button type="button" class="contacts-btn btn">Заблудились? Напишите нам!</button>
           </div>
         </div>
       </section>
@@ -280,14 +308,25 @@
             </div>
             <div class="footer__bottom-develop">
               <span>Разработано —</span>
-              <a href="https://htmlacademy.ru" class="develop-link">htmlacademy.ru</a>
+              <a href="https://htmlacademy.ru/intensive/htmlcss" class="develop-link">htmlacademy.ru</a>
             </div>
         </div>  
       </div>
     </footer>
 
+    <section class="products-popup">
+      <button type="button" class="products-close">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <h3 class="products-popup__title">Товар добавлен в корзину!</h3>
+      <div class="products-popup__btn-section">
+        <a href="#" class="products__popup btn-issue">Оформить заказ</a>
+        <button type="button" class="products__popup btn-cont">Продолжить покупки</button>
+      </div>
+    </section>
     
-        <section class="write-popup">
+    <section class="write-popup">
+          <h2 class="visually-hidden">Форма письма</h2>
           <button type="button" class="popup-close">
             <span class="visually-hidden">Закрыть</span>
           </button>
@@ -306,13 +345,24 @@
             </div>
             <button type="submit" class="write-btn btn">Отправить</button>
           </form>
-        </section> 
-
-        <section class="map-popup">
-          <div class="container">
-            <div></div>
-          </div>
         </section>
-    <script src="js/main.js"></script>
+        
+        <section class="popup-map">
+          <div class="container">
+            <div class="map-window">
+              <h2 class="visually-hidden">Как до нас добраться</h2>
+              <button type="button" class="popup-close map-close">
+                <span class="visually-hidden">Закрыть</span>
+              </button>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533248!2d30.320858716287706!3d59.93871648187619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1582834662534!5m2!1sru!2sru" class="map-window__interactive" width="940" height="447" style="border:0;" allowfullscreen=""></iframe>
+              <p><img class="map-window__img" src="img/big-map.jpg" width="940" height="447" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></p>
+            </div>
+          </div>
+        </section>    
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>   
+    <script src="js/main.min.js"></script>
   </body>
 </html>
