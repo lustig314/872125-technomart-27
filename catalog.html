@@ -5,8 +5,8 @@
     <title>HTML Academy: Каталог - Техномарт</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/style-catalog.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style-catalog.css">
   </head>
 
   <body>
@@ -93,13 +93,16 @@
             <h2 class="visually-hidden">Фильтр товаров</h2>
             <div class="filter__price">
               <span class="filter__price-title">Фильтр:</span>
-              <form action="#" method="POST" oninput="priceoutput.value=price.  value" class="filter__range">
-                <label class="filter__range-name" for="price">Цена:</label>
+              <div class="filter__range">
+                <h3 class="filter__range-name">Цена:</h3>
                 <div class="filter__range-top">
-                  <input type="range" id="price" min="0" max="40000" step="1000"  class="filter-input filter-input_type_range">
-                </div>  
-                <output name="priceoutput" class="filter__price-output">30000</output>
-              </form>
+                  <div class="filter__range-input"></div>
+                </div>
+                <div class="filter__range-bottom">
+                  <input type="number" name="min-price" value="0" class="filter__price-start">
+                  <input type="number" name="max-price" value="30000" class="filter__price-end">
+                </div> 
+              </div>
             </div>
             <form class="filter__brands" action="#" method="POST">
               <fieldset class="filter__brands-fieldset">
@@ -140,7 +143,7 @@
                   </li>
                 </ul>
               </fieldset>  
-                <a class="filter__btn" href="#">Показать</a>
+                <input type="submit" class="filter__btn" value="Показать">
             </form>
           </div>
         
@@ -359,7 +362,7 @@
             </div>
             <div class="footer__bottom-develop">
               <span>Разработано —</span>
-              <a href="https://htmlacademy.ru" class="develop-link">htmlacademy.ru</a>
+              <a href="https://htmlacademy.ru/intensive/htmlcss" class="develop-link">htmlacademy.ru</a>
             </div>
         </div>  
       </div>
@@ -376,6 +379,6 @@
         </div>
     </section>
 
-    <script src="js/catalog.min.js"></script>
+    <script src="js/catalog.js"></script>
   </body>
 </html>

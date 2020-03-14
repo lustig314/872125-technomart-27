@@ -114,11 +114,7 @@ window.addEventListener("keydown", function (evt) {
 /* JQuery */
 
 $(document).ready(function(){
-  $('.top-slider').slick({
-    dots: true,
-    autoplay: true,
-    autoplaySpeed: 5000
-  });
+ 
 
   $(".services__inner-descr").not(":first").hide();
   $(".inner-list__item").click(function() {

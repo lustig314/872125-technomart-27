@@ -5,8 +5,8 @@
     <title>HTML Academy: Техномарт</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/slick.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.css">
   </head>      
   <body>
@@ -76,21 +76,20 @@
                 <a class="top-item__link" href="#">На все случаи</a> 
               </li>
               <li class="top-item top-slider">
-                <div class="top-slider__item">
+                <input class="visually-hidden" type="radio" name="slider" id="switch1" checked >
+                <input class="visually-hidden" type="radio" name="slider" id="switch2" >
+                <div class="top-slider__controls">
+                  <label for="switch1"></label>
+                  <label for="switch2"></label>
+                </div>
+                <div class="top-slider__item" id="slide1">
                   <h2 class="top__title">Дрели</h2>
                   <span class="top-slider__descr">Соседям на радость!</span>
-                  <div class="slick__image">
-                    <img src="img/slide-image-1.jpg" alt="">
-                  </div> 
                   <a class="top__slider-btn btn" href="catalog.html">Открыть каталог</a>
-                  
                 </div>
-                <div class="top-slider__item">
+                <div class="top-slider__item" id="slide2">
                     <h2 class="top__title">Перфораторы</h2>
                     <span class="top-slider__descr">Настоящие мужские игрушки</span>
-                    <div class="slick__image">
-                      <img src="img/slide-image-2.jpg" alt="">
-                    </div>
                     <a class="top__slider-btn btn" href="catalog.html">Открыть каталог</a>
                 </div>
               </li>
@@ -255,7 +254,7 @@
             <p class="contacts__info">Вы можете забрать товар сами,<br> 
             заехав в наш офис:</p>
             <a href="#" class="map-link"><img class="map" src="img/map.jpg" width="300" height="158" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></a>
-            <button type="button" class="contacts-btn btn">Заблудились? Напишите нам!</button>
+            <a class="contacts-btn btn" href="#">Заблудились? Напишите нам!</a>
           </div>
         </div>
       </section>
@@ -363,6 +362,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>   
-    <script src="js/main.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
