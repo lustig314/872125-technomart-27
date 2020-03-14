@@ -50,9 +50,9 @@
           </div>   
           <nav class="menu">
             <ul class="menu-list">
-              <li class="menu-list__item"><a class="menu-list__link" href="#">Главная</a></li>
+              <li class="menu-list__item"><a class="menu-list__link" href="index.html">Главная</a></li>
               <li class="menu-list__item"><a class="menu-list__link" href="#">Компания</a></li>
-              <li class="menu-list__item"><a class="menu-list__link" href="#">Каталог</a></li>
+              <li class="menu-list__item"><a class="menu-list__link" href="catalog.html">Каталог</a></li>
               <li class="menu-list__item"><a class="menu-list__link" href="#">Новости</a></li>
               <li class="menu-list__item"><a class="menu-list__link" href="#">Спецпредложения</a></li>
               <li class="menu-list__item"><a class="menu-list__link" href="#">Доставка</a></li>
@@ -206,26 +206,29 @@
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
           </div>  
             <div class="services__inner">
-              <ul class="services__inner-list">
-                <li class="inner-list__item"><button type="button" class="services__inner-btn">Доставка</button></li>
-                <li class="inner-list__item"><button type="button" class="services__inner-btn">Гарантия</button></li>
-                <li class="inner-list__item"><button type="button" class="services__inner-btn">Кредит</button></li>
-              </ul>
-            <div class="services__inner-descr">
+              <input type="radio" name="tabs" id="tab1" class="visually-hidden" checked>
+              <input type="radio" name="tabs" id="tab2" class="visually-hidden">
+              <input type="radio" name="tabs" id="tab3" class="visually-hidden">
+              <div class="services__inner-controls">
+                <label class="inner-controls__item" for="tab1">Доставка</label>
+                <label class="inner-controls__item" for="tab2">Гарантия</label>
+                <label class="inner-controls__item" for="tab3">Кредит</label>
+              </div>
+            <div class="services__inner-descr" id="descr1">
               <h3 class="services__title">Доставка</h3>
               <p class="services__inner-text">
                 Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!<br>
                 Ведь мы неплохо заработаем,<br>
                 поднимая его на ваш этаж!</p>
             </div>
-            <div class="services__inner-descr ">
+            <div class="services__inner-descr" id="descr2">
               <h3 class="services__title">Гарантия</h3>
               <p class="services__inner-text">
               Если купленный у нас товар поломается или заискрит,<br>
               а также в случае пожара, спровоцированного его возгоранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.<br> 
               Дом уж восстановите как-нибудь сами.</p>
             </div>
-            <div class="services__inner-descr">
+            <div class="services__inner-descr" id="descr3">
               <h3 class="services__title">Кредит</h3>
               <p class="services__inner-text">Залезть в долговую яму стало проще! 
               Кредитные консультанты придут вам на помощь.</p>
@@ -274,7 +277,7 @@
               <ul class="footer-nav">
                 <li><a class="footer-nav__link" href="#">Компания</a></li>
                 <li><a class="footer-nav__link" href="#">Новости</a></li>
-                <li><a class="footer-nav__link" href="#">Каталог</a></li>
+                <li><a class="footer-nav__link" href="catalog.html">Каталог</a></li>
                 <li><a class="footer-nav__link" href="#">Доставка</a></li>
                 <li><a class="footer-nav__link" href="#">Контакты</a></li>
               </ul>

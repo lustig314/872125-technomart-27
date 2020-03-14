@@ -113,12 +113,3 @@ window.addEventListener("keydown", function (evt) {
 
 /* JQuery */
 
-$(document).ready(function(){
- 
-
-  $(".services__inner-descr").not(":first").hide();
-  $(".inner-list__item").click(function() {
-    $(".inner-list__item").removeClass("inner-list__item_current").eq($(this).index()).addClass("inner-list__item_current");
-    $(".services__inner-descr").hide().eq($(this).index()).fadeIn()
-  }).eq(0).addClass("inner-list__item_current");
-});

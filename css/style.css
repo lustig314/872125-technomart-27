@@ -918,7 +918,7 @@ input[type='radio'].visually-hidden {
 .services {
   background-color: #f4f7f9;
   margin-bottom: 80px;
-  padding-top: 45px;
+  padding-top: 65px;
   padding-bottom: 99px;
 }
 
@@ -949,8 +949,7 @@ input[type='radio'].visually-hidden {
   display: flex;
 }
 
-.services__inner-list {
-  list-style: none;
+.services__inner-controls {
   width: 240px;
   margin: 0;
   padding: 0;
@@ -959,7 +958,7 @@ input[type='radio'].visually-hidden {
   position: relative;
 }
 
-.services__inner-list::after {
+.services__inner-controls::after {
   content: '';
   background: url('../img/services-shadow.png') no-repeat 0 0;
   position: absolute;
@@ -969,46 +968,55 @@ input[type='radio'].visually-hidden {
   right: 0px;
 }
 
-.services__inner-btn {
+.inner-controls__item {
   font-family: 'Cuprum', Arial, sans-serif;
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
+  display: inline-block;
   color: #ffffff;
   background-color: #32425c;
   border: none;
   width: 240px;
   height: 61px;
-  text-align: left;
-  padding-left: 22px;
-  padding-bottom: 9px;
-}
-
-.inner-list__item_current .services__inner-btn{
-  background-color: #ffffff;
-  color: #32425c;
-  outline: none;
-}
-
-.inner-list__item:not(.inner-list__item_current) .services__inner-btn {
+  cursor: pointer;
+  padding-left: 20px;
+  padding-top: 13px;
   border-top: 1px solid #405069;
   border-bottom: 1px solid #293449;
 }
 
-
-.inner-list__item:not(.inner-list__item_current) .services__inner-btn:hover {
+.inner-controls__item:hover {
   background-color: #293449;
-  cursor: pointer;
 }
+
+#tab1:checked ~ #descr1,
+#tab2:checked ~ #descr2,
+#tab3:checked ~ #descr3 {
+  display: block;
+}
+
+#tab1:checked ~ .services__inner-controls label[for="tab1"],
+#tab2:checked ~ .services__inner-controls label[for="tab2"],
+#tab3:checked ~ .services__inner-controls label[for="tab3"] {
+  background-color: #ffffff;
+  color: #32425c;
+  border: none;
+}
+
 
 .services__inner-descr {
-  width: 280px;
+  width: 275px;
   position: relative;
-  
+  display: none;
 }
 
-.services__inner .services__inner-descr:nth-of-type(2) {
+.services__inner-descr:nth-of-type(3) {
   width: 375px;
+}
+
+.services__inner-descr:last-of-type {
+  width: 280px;
 }
 
 .services__inner .services__inner-descr:last-of-type .services__inner-text{
@@ -1025,7 +1033,7 @@ input[type='radio'].visually-hidden {
   position: absolute;
 }
 
-.services__inner-descr:first-of-type::after {
+.services__inner-descr:nth-of-type(2)::after {
   background: url('../img/car.png') no-repeat 0 0;
   width: 468px;
   height: 261px;
@@ -1033,7 +1041,7 @@ input[type='radio'].visually-hidden {
   left: 150px;
 }
 
-.services__inner-descr:nth-of-type(2)::after {
+.services__inner-descr:nth-of-type(3)::after {
   background: url('../img/guarantee.png') no-repeat 0 0;
   width: 389px;
   height: 283px;
