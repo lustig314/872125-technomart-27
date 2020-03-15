@@ -477,9 +477,9 @@ input[type='radio'].visually-hidden {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  align-items: center;
-  min-height: 60px;
   margin: 0;
+  margin-top: 18px;
+  margin-bottom: 18px;
   padding: 0;
 }
 
@@ -789,10 +789,10 @@ input[type='radio'].visually-hidden {
   list-style: none;
   margin: 0;
   padding: 0;
+  padding-top: 7px;
   display: flex;
   width: 450px;
   justify-content: space-between;
-  align-items: center;
   margin-left: 134px;
   min-height: 40px;
 }
@@ -833,32 +833,30 @@ input[type='radio'].visually-hidden {
   border-bottom: none;
 }
 
-.products__sorting-dirdown:hover .dirdown-path,
-.products__sorting-dirdown:focus .dirdown-path,
-.products__sorting-dirup:hover .dirup-path,
-.products__sorting-dirup:focus .dirup-path {
+.products__sorting-dirdown:nth-of-type(2):hover .dirdown-path,
+.products__sorting-dirdown:nth-of-type(2):focus .dirdown-path,
+.products__sorting-dirup:nth-of-type(2):hover .dirup-path,
+.products__sorting-dirup:nth-of-type(2):focus .dirup-path {
   fill: #231f20;
 }
 
 .products__list {
   list-style: none;
   margin: 0;
-  display: flex;
-  flex-wrap: wrap;
   margin-bottom: 32px;
   padding: 0;
+  width: 700px;
+  font-size: 0;
 }
 
 .product__list-item {
   border: 1px solid #e4e4e4;
   width: 220px;
-  min-height: 318px;
   margin-bottom: 20px;
   margin-right: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
   position: relative;
+  display: inline-block;
 }
 
 .product__list-item:nth-child(3n) {
@@ -870,10 +868,19 @@ input[type='radio'].visually-hidden {
   transition-duration: 0.25s;
 }
 
+.product__list-image {
+  width: 218px;
+  height: 168px;
+}
+
+.non-discount .price-btn {
+  margin-top: 28px;
+}
+
 .product__list-title {
   margin: 0;
   margin-top: 10px;
-  margin-bottom: 7px;
+  margin-bottom: 4px;
 }
 
 .product__list-name {
@@ -889,9 +896,6 @@ input[type='radio'].visually-hidden {
   width: 190px;
 }
 
-.non-discount .product__list-name{
-  margin-bottom: 31px;
-}
 
 .product__list-price {
   font-size: 17px;
@@ -900,6 +904,7 @@ input[type='radio'].visually-hidden {
   color: #999999;
   text-decoration: line-through;
   margin-bottom: 10px;
+  display: block;
 }
 
 .product__list-item .price-btn {
@@ -911,6 +916,9 @@ input[type='radio'].visually-hidden {
   position: relative;
   padding: 10px 30px;
   border-radius: 3px;
+  margin-bottom: 20px;
+  display: inline-block;
+  margin-right: 4px;
 }
 
 .product__list-item .price-btn::after {
