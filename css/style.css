@@ -127,6 +127,7 @@ input[type='radio'].visually-hidden {
   top: 1px;
 }
 
+
 .search-input:hover + label::before {
   opacity: 1;
 }
