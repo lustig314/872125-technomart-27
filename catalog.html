@@ -5,8 +5,8 @@
     <title>HTML Academy: Каталог - Техномарт</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/style-catalog.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style-catalog.css">
   </head>
 
   <body>
@@ -22,7 +22,6 @@
             <input type="search" name="options-search" placeholder="Поиск:"  class="search-input search-input_type_input" id="search-field"> 
             <label for="search-field">&nbsp;</label>
           </form> 
-          <div class="header__options">
             <ul class="options-list">
               <li class="options-list__item">
                 <a class="options-list__bookmarks-link" href="#">Закладки: 0</a>
@@ -34,32 +33,31 @@
                 <a class="options-list__issue-link" href="#">Оформить заказ</a>
               </li> 
             </ul>
-          </div>
         </div>
       </div>
-        <div class="container">
-          <div class="header__inner">
-            <p class="header__dscr"><em>Интернет-магазин
+      <div class="container header__inner">
+        <p class="header__dscr"><em>Интернет-магазин
             строительных материалов<br>
             и инструментов
             для ремонта</em></p>
-            <div class="header-contacts">  
-              <span class="header-contacts__number">+7 (812) 555-05-55</span>
-              <span class="header-contacts__address">г. Санкт-Петербург, ул. Б.     Конюшенная, д. 19/8</span>
-            </div>
-            <div class="personal">
-              <div class="personal__top">
-                <a class="personal__name" href="login.html"><span  class="personal__name-text">Равшан Джамшутович</span></a>
-                <a class="personal__logout" href="logout.html">
-                  <svg class="personal__logout-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17"><g fill="#c5c5c5"><path class="personal__logout-icon" fill="#c5c5c5" d="M21 8.5L12.125 0v6h-6v5h6v6z"/><path class="personal__logout-icon" fill="#c5c5c5" d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z"/></g></svg>
-                </a>
-              </div>
-              <div class="personal__bottom">
-                <a class="personal__orders" href="#">Мои заказы</a>
-                <a class="personal__cabinet" href="#">Личный кабинет</a>
-              </div> 
-            </div>
-          </div>   
+        <div class="header-contacts">  
+          <span class="header-contacts__number">+7 (812) 555-05-55</span>
+          <span class="header-contacts__address">г. Санкт-Петербург, ул. Б.     Конюшенная, д. 19/8</span>
+        </div>
+        <div class="personal">
+          <div class="personal__top">
+            <a class="personal__name" href="login.html"><span  class="personal__name-text">Равшан Джамшутович</span></a>
+            <a class="personal__logout" href="logout.html">
+              <svg class="personal__logout-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17"><g fill="#c5c5c5"><path class="personal__logout-icon" fill="#c5c5c5" d="M21 8.5L12.125 0v6h-6v5h6v6z"/><path class="personal__logout-icon" fill="#c5c5c5" d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z"/></g></svg>
+            </a>
+          </div>
+          <div class="personal__bottom">
+            <a class="personal__orders" href="#">Мои заказы</a>
+            <a class="personal__cabinet" href="#">Личный кабинет</a>
+          </div> 
+        </div> 
+      </div>
+        <div class="container">
           <nav class="menu">
             <ul class="menu-list">
               <li class="menu-list__item"><a class="menu-list__link" href="index.html">Главная</a></li>
@@ -70,15 +68,15 @@
               <li class="menu-list__item"><a class="menu-list__link" href="#">Доставка</a></li>
               <li class="menu-list__item"><a class="menu-list__link" href="#">Контакты</a></li>
             </ul>
-          </nav> 
-        </div>
+          </nav>
+        </div> 
     </header>
     
     <main>
       <section class="top-catalog">
         <div class="container">
           <ul class="breadcrumbs">
-            <li><a class="breadcrumbs__home" href="index.html"><img src="img/icon-home.png" alt="Иконка дома"></a></li>
+            <li><a class="breadcrumbs__home" href="index.html"><img src="img/icon-home.png" width="14px" height="12px" alt="Иконка дома"></a></li>
             <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Каталог</a></li>
             <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Инструмент</a></li>
             <li class="breadcrumbs__item"><a class="breadcrumbs__link breadcrums__link-current" href="#">Перфораторы</a></li>
@@ -174,7 +172,7 @@
                 <button type="button" class="action__btn-bookmarks">В Закладки</button>
               </div>
               <div class="product__list-image">
-                <img src="img/perforator-1.jpg" alt="Перфоратор BOSCH BFG 3000">
+                <img src="img/perforator-1.jpg" width="218px" height="170px" alt="Перфоратор BOSCH BFG 3000">
               </div>
               <h3 class="product__list-title">
                 <a href="#">
@@ -190,7 +188,7 @@
                 <button type="button" class="action__btn-bookmarks">В Закладки</button>
               </div>
               <div class="product__list-image">
-                <img src="img/perforator-2.jpg" alt="Перфоратор BOSCH BFG 6000">
+                <img src="img/perforator-2.jpg" width="218px" height="170px" alt="Перфоратор BOSCH BFG 6000">
               </div> 
               <h3 class="product__list-title">
                 <a href="#">
@@ -207,7 +205,7 @@
               </div>
               <div class="product__list-flag flag-new">новинка</div>
               <div class="product__list-image">
-                <img src="img/perforator-1.jpg" alt="Перфоратор BOSCH BFG 2000">
+                <img src="img/perforator-1.jpg" width="218px" height="170px" alt="Перфоратор BOSCH BFG 2000">
               </div> 
               <h3 class="product__list-title">
                 <a href="#">
@@ -222,7 +220,7 @@
                 <button type="button" class="action__btn-bookmarks">В Закладки</button>
               </div>
               <div class="product__list-image">
-                <img src="img/perforator-1.jpg" alt="Перфоратор BOSCH BFG 3000">
+                <img src="img/perforator-1.jpg" width="218px" height="170px" alt="Перфоратор BOSCH BFG 3000">
               </div> 
               <h3 class="product__list-title">
                 <a href="#">
@@ -239,7 +237,7 @@
               </div>
               <div class="product__list-flag flag-new">новинка</div>
               <div class="product__list-image">
-                <img src="img/perforator-2.jpg" alt="Перфоратор BOSCH BFG 6000">
+                <img src="img/perforator-2.jpg" width="218px" height="170px" alt="Перфоратор BOSCH BFG 6000">
               </div> 
               <h3 class="product__list-title">
                 <a href="#">
@@ -255,7 +253,7 @@
                 <button type="button" class="action__btn-bookmarks">В Закладки</button>
               </div>
               <div class="product__list-image">
-                <img src="img/perforator-1.jpg" alt="Перфоратор BOSCH BFG 2000">
+                <img src="img/perforator-1.jpg" width="218px" height="170px" alt="Перфоратор BOSCH BFG 2000">
               </div> 
               <h3 class="product__list-title">
                 <a href="#">
@@ -271,7 +269,7 @@
               </div>
               <div class="product__list-flag flag-new">новинка</div>
               <div class="product__list-image">
-                <img src="img/perforator-1.jpg" alt="Перфоратор BOSCH BFG 3000">
+                <img src="img/perforator-1.jpg" width="218px" height="170px" alt="Перфоратор BOSCH BFG 3000">
               </div> 
               <h3 class="product__list-title">
                 <a href="#">
@@ -287,7 +285,7 @@
                 <button type="button" class="action__btn-bookmarks">В Закладки</button>
               </div>
               <div class="product__list-image">
-                <img src="img/perforator-2.jpg" alt="Перфоратор BOSCH BFG 6000">
+                <img src="img/perforator-2.jpg" width="218px" height="170px" alt="Перфоратор BOSCH BFG 6000">
               </div> 
               <h3 class="product__list-title">
                 <a href="#">
@@ -303,7 +301,7 @@
                 <button type="button" class="action__btn-bookmarks">В Закладки</button>
               </div>
               <div class="product__list-image">
-                <img src="img/perforator-1.jpg" alt="Перфоратор BOSCH BFG 2000">
+                <img src="img/perforator-1.jpg" width="218px" height="170px" alt="Перфоратор BOSCH BFG 2000">
               </div> 
               <h3 class="product__list-title">
                 <a href="#">
@@ -334,31 +332,29 @@
     </main>
 
     <footer class="footer">
-      <div class="container">
-        <div class="footer__top">
-          <div class="footer__logo">
-            <a href="index.html" class="footer__logo-link">
-              <img src="img/logo.png" width="136" height="21" alt="Логотип" class="footer-pic">
-            </a>
-            <p class="footer__logo-text">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-              +7 (812) 555-05-55</p>
-          </div>
-            <div class="footer__lists">     
-              <ul class="footer-nav">
-                <li><a class="footer-nav__link" href="#">Компания</a></li>
-                <li><a class="footer-nav__link" href="#">Новости</a></li>
-                <li><a class="footer-nav__link" href="catalog.html">Каталог</a></li>
-                <li><a class="footer-nav__link" href="#">Доставка</a></li>
-                <li><a class="footer-nav__link" href="#">Контакты</a></li>
-              </ul>
-              <ul class="footer-products">
-                <li><a class="footer-products__link" href="#">Материалы</a></li>
-                <li><a class="footer-products__link" href="#">Техника</a></li>
-                <li><a class="footer-products__link" href="#">Инструмент</a></li>
-                <li><a class="footer-products__link" href="#">Спецпредложения</a></li>
-              </ul>
-            </div>          
+      <div class="footer__top container">
+        <div class="footer__logo">
+          <a href="index.html" class="footer__logo-link">
+            <img src="img/logo.png" width="136" height="21" alt="Логотип" class="footer-pic">
+          </a>
+          <p class="footer__logo-text">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+            +7 (812) 555-05-55</p>
         </div>
+          <div class="footer__lists">     
+            <ul class="footer-nav">
+              <li><a class="footer-nav__link" href="#">Компания</a></li>
+              <li><a class="footer-nav__link" href="#">Новости</a></li>
+              <li><a class="footer-nav__link" href="catalog.html">Каталог</a></li>
+              <li><a class="footer-nav__link" href="#">Доставка</a></li>
+              <li><a class="footer-nav__link" href="#">Контакты</a></li>
+            </ul>
+            <ul class="footer-products">
+              <li><a class="footer-products__link" href="#">Материалы</a></li>
+              <li><a class="footer-products__link" href="#">Техника</a></li>
+              <li><a class="footer-products__link" href="#">Инструмент</a></li>
+              <li><a class="footer-products__link" href="#">Спецпредложения</a></li>
+            </ul>
+          </div>          
       </div>
       <div class="footer__bottom">
         <div class="container">
@@ -397,6 +393,6 @@
         </div>
     </section>
 
-    <script src="js/catalog.min.js"></script>
+    <script src="js/catalog.js"></script>
   </body>
 </html>
