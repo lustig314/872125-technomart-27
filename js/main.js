@@ -1,6 +1,6 @@
 
 var popupProducts = document.querySelector(".products-popup");
-var productsLink = document.querySelectorAll(".action__btn-bookmarks");
+var productsLinks = document.querySelectorAll(".action__btn-bookmarks");
 var productsClose = popupProducts.querySelector(".products-close");
 var link = document.querySelector(".contacts-btn");
 var popup = document.querySelector(".write-popup");
@@ -21,13 +21,13 @@ try {
     isStorageSupport = false;
 }
 
-productsLink.forEach(function(btn){
-  btn.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  popupProducts.classList.remove("products-popup-close");
-  popupProducts.classList.add("products-popup-show");
-});
-});
+for (var i = 0; i < productsLinks.length; i++) {
+  productsLinks[i].addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popupProducts.classList.remove("products-popup-close");
+    popupProducts.classList.add("products-popup-show");
+  });
+};
 
 productsClose.addEventListener("click", function (evt){
   evt.preventDefault();
